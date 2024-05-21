@@ -2,16 +2,17 @@ const express = require ('express');
 const app = express();
 
 app.get( '/', function (request ,response){
-    const homePage = `<h1>Home Page</h1>
-    <p>Esta es la Pagina de inicio de la tienda virtual</p>`
-    response.send( homePage )
+    const data = {
+        message: 'Bienvendio a la web'
+    }
+    response.json(data)
 })
 
-app.get('/contactenos', function (request, response){
-    response.send(`<h1>Contact page</h1><form>
-        <input />
-        <button>Send</button>
-    </form>`)
+app.get('/api', function (request, response){
+    response.json([
+        {nombre: 'nidia', genero:'femenino'},
+        {nombre: 'maria', genero:'femenino'},
+    ])
 })
 
 app.listen( 3000, function (){
