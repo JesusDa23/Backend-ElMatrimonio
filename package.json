@@ -4,7 +4,7 @@
   "description": "Es una finca que se pueden realizar reservaciones",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node --watch ./src/index.js"
   },
   "keywords": [
     "node",
@@ -13,5 +13,8 @@
     "multer"
   ],
   "author": "Jesús David Chavarro Castro",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
