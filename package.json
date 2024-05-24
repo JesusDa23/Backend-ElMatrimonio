@@ -4,7 +4,7 @@
   "description": "Es una finca que se pueden realizar reservaciones",
   "main": "index.js",
   "scripts": {
-    "dev": "node --watch ./src/index.js"
+    "dev": "node --env-file .env --watch ./src/index.js"
   },
   "keywords": [
     "node",

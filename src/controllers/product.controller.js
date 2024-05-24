@@ -1,32 +1,27 @@
-function createProduct (request, response){
-    response.json({msg: 'Crea un Producto nuevo'})
-}
+const { request, response } = require("express");
+const { InsertProduct } = require("../services/product.service");
 
-function getProducts (request, response ){      
-    response.json({
-        msg: 'Obtiene todos los productos'
-    })
-}
-function getProductById (){
+async function createProduct( req, res ){
+    const product = req.body;
+
+
+    try {
+        const newProduct = await InsertProduct(product);
+        res.json({
+            ok:true,
+            data: newProduct
+        });
+
+    }catch(error){
+        console.error(error)
+        res.json({
+            ok:false,
+            msg: 'NO se pudo insertar el producto'
+        })
+    }
 
 }
-
-function updateProductById (request, response){
-    response.json({
-        msg: 'Actualizar un Producto por su ID'
-    })
-}
-
-function deleteProductById (request, response){
-    response.json({
-        msg: 'Eliminar un Producto por su ID'
-    })
-} 
 
 module.exports = {
-    createProduct,
-    getProducts,
-    getProductById,
-    updateProductById,
-    deleteProductById
+    createProduct
 }

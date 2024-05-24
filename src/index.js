@@ -2,12 +2,16 @@ const express = require ('express');
 const app = express();
 
 const {dbConection} = require( './config/mongo.config' ) // Importamos la configuracion de mongoose 
+const PORT = process.env.PORT
 
 // htpp://localhost:3000/api/products
+
+app.use( express.json() );
 app.use('/api/products', require('./routes/product.routes'))  
 
 dbConection(); // invoca la configuracion 
 
-app.listen( 3000, function (){
-    console.log('Servidor corriendo en el puerto 3000' );
-});
+app.listen( PORT, function (){
+    console.log(`Servidor corriendo en el puerto ${PORT}` );
+})
+
