@@ -5,7 +5,7 @@ async function getAllCategories(){
 }
 
 async function getOneCategoriesById(idProducto){
-    return await CategoryModel.find({_id:idProducto})
+    return await CategoryModel.findOne({_id:idProducto})
 }
 
 async function createOneNewCategory(newCategory){

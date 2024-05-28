@@ -9,7 +9,7 @@ async function obtenerProductos(){
 }
 
 async function obtenerProductoPorUnId(idProducto){
-    return await ProductModel.find({_id: idProducto});
+    return await ProductModel.findOne({_id: idProducto});
 }
 
 async function eliminarProductoPorUnId(idProducto){
