@@ -9,6 +9,8 @@ const PORT = process.env.PORT
 app.use( express.json() );
 app.use('/api/products', require('./routes/product.routes'))  
 
+app.use('/api/category', require('./routes/categories.routes'))
+
 dbConection(); // invoca la configuracion 
 
 app.listen( PORT, function (){
