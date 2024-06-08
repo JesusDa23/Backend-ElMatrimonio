@@ -16,7 +16,7 @@ const ServicioSchema = new Schema({
     numPersonas: {
         type: Number,
     },
-    precio: {
+    precioDeco: {
         type: Number,
         default: 0,
     },
