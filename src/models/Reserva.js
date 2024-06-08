@@ -26,11 +26,12 @@ const ReservaSchema = new Schema({
         required:true
     },
     cantidadPersonas:{
-        type: String,
+        type: Number,
     }, 
     estado: {
         type:String,
-        required: true
+        required:false,
+        default: 'pendiente'
     }
 })
 

@@ -1,12 +1,16 @@
-const { obtenerReservas, eliminarReserva } = require('../controllers/reservas.controller');
+
 const ReservaModel = require('../models/Reserva');
 
 const insertarReserva = async (nuevaReserva) => {
     return await ReservaModel.create(nuevaReserva)
 }
 
-const obtenerReservas = async () => {
+const obtenerUnaReserva = async () => {
     return await ReservaModel.find();
+}
+
+const obtenerUnaReservaPorId = async (_id) => {
+    return await ReservaModel.findOne({_id})
 }
 
 const actualizaUnaReserva = async (_id, dataActualizada) => {
@@ -20,7 +24,8 @@ const eliminarUnaReserva = async (_id) => {
 
 module.exports = {
     insertarReserva,
-    obtenerReservas,
+    obtenerUnaReserva,
+    obtenerUnaReservaPorId,
     actualizaUnaReserva,
     eliminarUnaReserva
 }
