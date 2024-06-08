@@ -4,11 +4,11 @@ const ServicioSchema = new Schema({
 
     nombre:{
         type:String,
-        require : true,
+        required : true,
     },
     descripcion:{
         type:String,
-        require : true,
+        required : true,
     },
     urlImagen: {
         type: String,
@@ -20,6 +20,11 @@ const ServicioSchema = new Schema({
         type: Number,
         default: 0,
     },
+    menu_id:{
+        type: String,
+        required: false         // volver true
+    }
+
 })
 
 const ServicioModel = model(
