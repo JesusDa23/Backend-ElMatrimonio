@@ -6,7 +6,7 @@ const ReservaSchema = new Schema({
         required:true
     },
     idUsuario: {
-        type: Number,
+        type: String,
         required:true
     },
     email: {
@@ -23,10 +23,11 @@ const ReservaSchema = new Schema({
     },
     tipoServicio:{
         type:String,
-        required:true
+        required:false
     },
     cantidadPersonas:{
         type: Number,
+        required:false
     }, 
     estado: {
         type:String,
