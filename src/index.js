@@ -14,6 +14,8 @@ app.use(cors())
 app.use('/api/menu', require('./routes/menu.routs'))  
 app.use('/api/servicios', require('./routes/servicios.routers'))
 app.use('/api/reservas', require('./routes/reservas.routes'))
+app.use('/api/pedidos', require('./routes/pedidosmenu.routes'))
+
 
 
 dbConection(); // invoca la configuracion 

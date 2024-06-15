@@ -5,16 +5,17 @@ const ReservaSchema = new Schema({
         type: String,
         required:true
     },
-    idUsuario: {
+    cedula: {
         type: String,
-        required:true
+        required:true,
+        unique: true
     },
     email: {
         type:String,
         required:true
     },
     fechaReserva: {
-        type: Date,
+        type: String,
         required:true
     },
     horaLLegada:{

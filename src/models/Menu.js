@@ -9,6 +9,10 @@ const MenuSchema = new Schema({
         type : Number,
         required : true
     },
+    urlImage: {
+        type: String,
+        required: false
+    },
     type: {
         type: String
     }
@@ -20,3 +24,5 @@ const MenuSchema = new Schema({
 const MenuModel = model('Menu',MenuSchema)
 
 module.exports = MenuModel
+
+//TOdo: crear el esquema para los pedidos del menu :)
