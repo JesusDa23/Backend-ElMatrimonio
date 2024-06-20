@@ -15,6 +15,9 @@ const MenuSchema = new Schema({
     },
     type: {
         type: String
+    },
+    descripcion: {
+        type: String
     }
 },
 {

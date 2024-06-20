@@ -9,7 +9,7 @@ const crearReserva = async (req, res) => {
         res.json({
             ok:true,
             data:nuevaReserva,
-            msg:'Secreo la reserva Exitosamente'
+            msg:'Se creo la reserva Exitosamente'
         })
     }catch(error){
         console.log(error)
