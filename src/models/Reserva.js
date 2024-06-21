@@ -14,11 +14,15 @@ const ReservaSchema = new Schema({
         type:String,
         required:true
     },
+    telefono: {
+        type: String,
+        required:true
+    },
     fechaReserva: {
         type: String,
         required:true
     },
-    horaLLegada:{
+    horaLlegada:{
         type:String,
         required: true
     },

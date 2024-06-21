@@ -18,7 +18,40 @@ const PedidoSchema = new Schema({
     total: {
         type:String,
         require:true
-    }
+    },
+
+    cliente: [{      
+        nombre: {
+            type:String,
+            ref: 'Reservas',
+            required:true
+        },
+        cedula: {
+            type:String,
+            ref: 'Reservas',
+            required:true
+        },
+        telefono: {
+            type:String,
+            ref: 'Reservas',
+            required:true
+        },
+        cantidadPersonas: {
+            type:Number,
+            ref: 'Reservas',
+            required:true
+        },
+        fechaReserva: {
+            type:String,
+            ref: 'Reservas',
+            required:true
+        },
+        horaLlegada:{
+            type:String,
+            ref: 'Reservas',
+            required:true
+        },
+    }] 
 },
 {
     timestamps: true
