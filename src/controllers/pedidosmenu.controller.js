@@ -1,5 +1,5 @@
 const {req,res} = require('express');
-const { ObtenerUnPedido, crearUnPedido, eliminarUnPedido, actualizarUnPedido } = require('../services/pedidosmenu.service');
+const { ObtenerUnPedido, crearUnPedido, eliminarUnPedido, actualizarUnPedido, ObtenerUnPedidoPorId } = require('../services/pedidosmenu.service');
 
 
 const obtenerPedidos = async (req, res) => {
@@ -16,6 +16,25 @@ const obtenerPedidos = async (req, res) => {
         res.json({
             ok: false,
             msg: 'error al obtener el menu'
+        })
+    }
+}
+
+const obtenerPedidosPorId = async (req, res) => {
+    const cedula = req.params.cedula
+    try{  
+        const data = await ObtenerUnPedidoPorId(cedula)
+        res.json({
+            ok:true,
+            data,
+            msg: 'Muestra elpedido del usuario exitosamente'
+        })
+    }
+    catch(error){
+        console.error(error)
+        res.json({
+            ok: false,
+            msg: 'error al obtener el pedido del usuario'
         })
     }
 }
@@ -41,7 +60,7 @@ const crearPedido = async (req,res) => {
 }
 
 const eliminarPedido = async (req,res) => {
-    const id = req.params.id
+    const id = req.params.cedula
     try{
         const data = eliminarUnPedido(id)
         res.json({
@@ -78,6 +97,7 @@ const actualizarPedido = async (req,res) => {
 }
 module.exports = {
     obtenerPedidos,
+    obtenerPedidosPorId,
     crearPedido,
     eliminarPedido,
     actualizarPedido

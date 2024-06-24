@@ -7,7 +7,7 @@ async function dbConection(){
     }
     catch(error){
         console.log(error);  // mensaje para el desarrollador
-        throw new Error('Error al iniciar la base de datos');
+        // throw new Error('Error al iniciar la base de datos');
     }
 }
 

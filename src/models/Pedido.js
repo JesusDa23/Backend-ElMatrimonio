@@ -31,6 +31,11 @@ const PedidoSchema = new Schema({
             ref: 'Reservas',
             required:true
         },
+        email: {
+            type: String,
+            ref:'Reservas',
+            required:true
+        },
         telefono: {
             type:String,
             ref: 'Reservas',

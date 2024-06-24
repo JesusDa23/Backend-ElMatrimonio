@@ -3,11 +3,16 @@ const PedidoModel = require ('../models/Pedido');
 const ObtenerUnPedido = async () => {
     return await PedidoModel.find()
 }
+
+const ObtenerUnPedidoPorId= async (cedula) => {
+    return await PedidoModel.findOne(cedula)
+}
+
 const crearUnPedido = async (nuevoPedido) => {
     return await PedidoModel.create(nuevoPedido)
 }
-const eliminarUnPedido = async (_id) => {
-    return await PedidoModel.findOneAndDelete({_id}) 
+const eliminarUnPedido = async (cedula) => {
+    return await PedidoModel.findOneAndDelete({cedula}) 
 }
 const actualizarUnPedido = async (_id, newData) => {
     return await PedidoModel.findOneAndUpdate({_id}, newData, {new: true})
@@ -15,6 +20,7 @@ const actualizarUnPedido = async (_id, newData) => {
 
 module.exports = {
     ObtenerUnPedido,
+    ObtenerUnPedidoPorId,
     crearUnPedido,
     eliminarUnPedido,
     actualizarUnPedido
