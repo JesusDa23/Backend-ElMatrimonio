@@ -5,7 +5,7 @@ const ObtenerUnPedido = async () => {
 }
 
 const ObtenerUnPedidoPorId= async (cedula) => {
-    return await PedidoModel.findOne(cedula)
+    return await PedidoModel.findOne({cliente[ 'cedula' ]: cedula})
 }
 
 const crearUnPedido = async (nuevoPedido) => {

@@ -29,7 +29,8 @@ const PedidoSchema = new Schema({
         cedula: {
             type:String,
             ref: 'Reservas',
-            required:true
+            required:true,
+            unique: true
         },
         email: {
             type: String,
@@ -55,7 +56,7 @@ const PedidoSchema = new Schema({
             type:String,
             ref: 'Reservas',
             required:true
-        },
+        }
     }] 
 },
 {
