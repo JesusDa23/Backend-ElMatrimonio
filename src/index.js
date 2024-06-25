@@ -5,11 +5,12 @@ const app = express();
 const {dbConection} = require( './config/mongo.config' ) // Importamos la configuracion de mongoose 
 const PORT = process.env.PORT
 
-// htpp://localhost:3000/api/products
+// http://localhost:4000/api/products
 
 app.use( express.json() );
 app.use(cors())
 
+app.use('/api/cafe', require('./routes/cafe.routers'))
 app.use('/api/servicios', require('./routes/servicios.routers'))
 
 dbConection(); // invoca la configuracion 
