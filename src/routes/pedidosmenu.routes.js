@@ -4,9 +4,9 @@ const router = Router()
 
 
 router.get('/' , obtenerPedidos)
-router.get('/:id' , obtenerPedidosPorId)
+router.get('/:cedula' , obtenerPedidosPorId)
 router.post('/',  crearPedido)
-router.delete('/:id', eliminarPedido)
-router.patch('/:id', actualizarPedido)
+router.delete('/:cedula', eliminarPedido)
+router.patch('/:cedula', actualizarPedido)
 
 module.exports = router

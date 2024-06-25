@@ -9,8 +9,8 @@ const obtenerUnaReserva = async () => {
     return await ReservaModel.find();
 }
 
-const obtenerUnaReservaPorId = async (_id) => {
-    return await ReservaModel.findOne({_id})
+const obtenerUnaReservaPorId = async (cedula) => {
+    return await ReservaModel.findOne({cedula})
 }
 
 const actualizaUnaReserva = async (_id, dataActualizada) => {
@@ -18,8 +18,8 @@ const actualizaUnaReserva = async (_id, dataActualizada) => {
 );
 }
 
-const eliminarUnaReserva = async (_id) => {
-    return await ReservaModel.findOneAndDelete({_id},)
+const eliminarUnaReserva = async (cedula) => {
+    return await ReservaModel.findOneAndDelete({cedula})
 }
 
 module.exports = {

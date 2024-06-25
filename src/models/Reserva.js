@@ -1,23 +1,6 @@
 const {Schema, model } = require ('mongoose')
 
 const ReservaSchema = new Schema({
-    nombre: {
-        type: String,
-        required:true
-    },
-    cedula: {
-        type: String,
-        required:true,
-        unique: true
-    },
-    email: {
-        type:String,
-        required:true
-    },
-    telefono: {
-        type: String,
-        required:true
-    },
     fechaReserva: {
         type: String,
         required:true
@@ -38,6 +21,12 @@ const ReservaSchema = new Schema({
         type:String,
         required:false,
         default: 'pendiente'
+    },
+    cedula: {
+        type: String,
+        required: true,
+        ref: 'Reserva',
+        uniqued:true
     }
 })
 

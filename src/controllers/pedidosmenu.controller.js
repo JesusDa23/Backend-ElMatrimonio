@@ -43,6 +43,9 @@ const obtenerPedidosPorId = async (req, res) => {
 
 const crearPedido = async (req,res) => {
     const pedido = req.body;
+
+    
+
     try{
         const data = await crearUnPedido(pedido)
         res.json({
@@ -60,9 +63,9 @@ const crearPedido = async (req,res) => {
 }
 
 const eliminarPedido = async (req,res) => {
-    const id = req.params.cedula
+    const cedula = req.params.cedula
     try{
-        const data = eliminarUnPedido(id)
+        const data = eliminarUnPedido(cedula)
         res.json({
             ok:true,
             data,

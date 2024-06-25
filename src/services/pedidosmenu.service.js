@@ -1,14 +1,14 @@
-const PedidoModel = require ('../models/Pedido');
+const PedidoModel = require ('../models/Pedidos');
 
 const ObtenerUnPedido = async () => {
     return await PedidoModel.find()
 }
 
 const ObtenerUnPedidoPorId= async (cedula) => {
-    return await PedidoModel.findOne({cliente[ 'cedula' ]: cedula})
+    return await PedidoModel.findOne({cedula})
 }
 
-const crearUnPedido = async (nuevoPedido) => {
+const   crearUnPedido = async (nuevoPedido) => {
     return await PedidoModel.create(nuevoPedido)
 }
 const eliminarUnPedido = async (cedula) => {
