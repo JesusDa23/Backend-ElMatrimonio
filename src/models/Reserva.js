@@ -20,13 +20,14 @@ const ReservaSchema = new Schema({
     estado: {
         type:String,
         required:false,
+        ref: 'Users',
         default: 'pendiente'
     },
     cedula: {
         type: String,
         required: true,
-        ref: 'Reserva',
-        uniqued:true
+        uniqued:true,
+        ref: 'Users'
     }
 })
 

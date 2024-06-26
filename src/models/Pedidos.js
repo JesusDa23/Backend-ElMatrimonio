@@ -9,7 +9,11 @@ const PedidoSchema = new Schema({
     cedula: {
         type: String,
         required: true,
-        ref: 'Reserva',
+        ref: 'Users',
+    },
+    descripcion: {
+        type:String,
+        required:false
     }
 }
 );
