@@ -4,7 +4,7 @@ const PedidoCampingSchema = new Schema({
     productos: [],
     cedula:{
         type:String,
-        required:true,
+        required:false,
     },
     total:{
         type: Number,
