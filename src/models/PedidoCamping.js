@@ -5,6 +5,7 @@ const PedidoCampingSchema = new Schema({
     cedula:{
         type:String,
         required:true,
+        ref: 'Users'
     },
     total:{
         type: Number,

@@ -11,7 +11,7 @@ const getAllPedidoCamping = async()=>{                     // optiene  todos los
 const getOnePedidoCamping = async(cedula)=>{            //  optiene un servicio 
     return await PedidoCampingModel.findOne({cedula})
 }
-const removeOnePedidoCamping = async(_cedula)=>{                  // Remueve un servicio
+const removeOnePedidoCamping = async(cedula)=>{                  // Remueve un servicio
     return await PedidoCampingModel.findOneAndDelete({cedula})
 }
 const updateOnePedidoCamping = async(cedula, newData)=>{
