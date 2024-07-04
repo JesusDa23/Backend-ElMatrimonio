@@ -20,7 +20,6 @@ app.use('/api/pedidocamping', require('./routes/pedidocamping.routes'))
 
 
 
-
 dbConection(); // invoca la configuracion 
 
 app.listen( PORT, function (){
