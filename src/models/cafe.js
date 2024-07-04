@@ -1,5 +1,6 @@
 const{Schema, model } = require('mongoose');
 
+
 const CafeSchema = new Schema({
     nombre:{
         type:String,
@@ -26,5 +27,6 @@ const CafeModel = model (
     'Cafe', 
     CafeSchema,
 )
+
 
 module.exports = CafeModel;
