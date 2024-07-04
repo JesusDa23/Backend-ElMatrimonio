@@ -4,14 +4,18 @@ const{Schema, model } = require('mongoose');
 const PedidoCafeSchema = new Schema({
     cedula: {
         type: String,
-        required: true,
+        required: false,
         unique: true
     },
     productos: [],
     total: {
         type: Number,
         default: 0
-    } 
+    },
+    cantidad: {
+        type: Number,
+        required: true,
+    },
 
     },
     {   
