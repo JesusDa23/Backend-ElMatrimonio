@@ -22,7 +22,29 @@ const UserSchema = new Schema({
         type: String,
         required: false,
         default: 'registered'
-    }
+    },
+    fechaReserva: {
+        type: String,
+        required:true
+    },
+    horaLlegada:{
+        type:String,
+        required: true
+    },
+    tipoServicio:{
+        type:String,
+        required:false
+    },
+    cantidadPersonas:{
+        type: Number,
+        required:false
+    }, 
+    estado: {
+        type:String,
+        required:false,
+        ref: 'Users',
+        default: 'pendiente'
+    },
 },
 {
     timestamps:true

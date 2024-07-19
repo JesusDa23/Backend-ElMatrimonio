@@ -2,7 +2,8 @@ const mongoose = require( 'mongoose' )
 
 async function dbConection(){
     try {
-        await mongoose.connect(  process.env.DB_URL, {})
+        await mongoose.connect(  process.env.DB_URL, {
+        })
         console.log('base de datos inicializada exitosamente');
     }
     catch(error){
@@ -14,5 +15,4 @@ async function dbConection(){
 
 module.exports = {
     dbConection,
-
 }

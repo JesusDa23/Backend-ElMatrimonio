@@ -8,6 +8,7 @@ const app = express();
 
 app.use( express.json() );
 app.use(cors())
+
 app.use('/api/menu', require('./routes/menu.routs'))  
 app.use('/api/camping', require('./routes/camping.routers'))
 app.use('/api/reservas', require('./routes/reservas.routes'))
