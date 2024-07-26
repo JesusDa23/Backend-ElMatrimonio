@@ -3,10 +3,10 @@ const { insertNewPedidoCamping, getPedidoCamping, getPedidoCampingById, removePe
 
 const router = Router();
 
-router.post('/', insertNewPedidoCamping)
-router.get('/', getPedidoCamping)
-router.get('/:cedula',getPedidoCampingById)
-router.delete('/:cedula',removePedidoCampingById)
-router.patch('/:cedula', updateOnePedidoCampingById)
+router.post('/pedidocamping', insertNewPedidoCamping)
+router.get('/pedidocamping', getPedidoCamping)
+router.get('/pedidocamping/:cedula',getPedidoCampingById)
+router.delete('/pedidocamping/:cedula',removePedidoCampingById)
+router.patch('/pedidocamping/:cedula', updateOnePedidoCampingById)
 
 module.exports = router;

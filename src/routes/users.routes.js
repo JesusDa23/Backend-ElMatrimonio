@@ -3,10 +3,10 @@ const { crearCliente, obtenerClientes, obtenerClientePorId, actualizarCliente, e
 
 const router = Router();
 
-router.post('/', crearCliente)
-router.get('/', obtenerClientes)
-router.get('/:cedula', obtenerClientePorId)
-router.patch('/:cedula', actualizarCliente)
-router.delete('/:cedula', eliminarCliente)
+router.post('/cliente', crearCliente)
+router.get('/cliente', obtenerClientes)
+router.get('/cliente/:cedula', obtenerClientePorId)
+router.patch('/cliente/:cedula', actualizarCliente)
+router.delete('/cliente/:cedula', eliminarCliente)
 
 module.exports = router;

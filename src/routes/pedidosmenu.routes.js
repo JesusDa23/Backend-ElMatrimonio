@@ -3,10 +3,10 @@ const { obtenerPedidos, crearPedido, eliminarPedido, actualizarPedido, obtenerPe
 const router = Router()
 
 
-router.get('/' , obtenerPedidos)
-router.get('/:cedula' , obtenerPedidosPorId)
-router.post('/',  crearPedido)
-router.delete('/:cedula', eliminarPedido)
-router.patch('/:cedula', actualizarPedido)
+router.get('/pedidos' , obtenerPedidos)
+router.get('/pedidos/:cedula' , obtenerPedidosPorId)
+router.post('/pedidos',  crearPedido)
+router.delete('/pedidos/:cedula', eliminarPedido)
+router.patch('/pedidos/:cedula', actualizarPedido)
 
 module.exports = router

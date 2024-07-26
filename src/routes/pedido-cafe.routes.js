@@ -3,10 +3,10 @@ const { insertNewPedidoCafe, getPedidoCafe, getPedidoCafeById, removePedidoCafeB
 // controlador
 const router = Router();
 
-router.post('/',insertNewPedidoCafe)
-router.get('/',getPedidoCafe)
-router.get('/:cedula',getPedidoCafeById)
-router.delete('/:cedula',removePedidoCafeById)
-router.patch('/:cedula',updateOnePedidoCafeById)
+router.post('/pedidocafe',insertNewPedidoCafe)
+router.get('/pedidocafe',getPedidoCafe)
+router.get('/pedidocafe/:cedula',getPedidoCafeById)
+router.delete('/pedidocafe/:cedula',removePedidoCafeById)
+router.patch('/pedidocafe/:cedula',updateOnePedidoCafeById)
 
 module.exports = router;

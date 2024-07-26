@@ -3,11 +3,11 @@ const { getOneMenu, getOneMenuById, createOneMenu, removeOneMenuById, updateMenu
 
 const router = Router();
 
-router.get('/', getOneMenu)
-router.get('/:id',getOneMenuById)
-router.post('/', createOneMenu)
-router.delete('/:id', removeOneMenuById)
-router.put('/:id', updateMenuOneById)
+router.get('/menu', getOneMenu)
+router.get('/menu/:id',getOneMenuById)
+router.post('/menu', createOneMenu)
+router.delete('/menu/:id', removeOneMenuById)
+router.put('/menu/:id', updateMenuOneById)
 
 
 module.exports = router;
